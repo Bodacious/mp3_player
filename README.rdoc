@@ -44,7 +44,7 @@ Below is a list of the extra options you can specify:
 <b>READ the RDocs for more info:</b> <em>vendor/plugins/mp3_player/doc/index.html</em>
 
 
-This plugin is based on the Audio Player Worpress Plugin by Martin Laine:http://www.1pixelout.net/code/audio-player-wordpress-plugin/
+This plugin is based on the Audio Player Worpress Plugin by Martin Laine http://www.1pixelout.net/code/audio-player-wordpress-plugin
 
 
 Please send any feedback to dr_gavin@hotmail.com
