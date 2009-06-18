@@ -1,0 +1,49 @@
+h1. Mp3Player
+
+To install:
+	script/plugin install git://github.com/GavinM/mp3_player.git
+
+To setup:
+	rake mp3_player
+
+
+This adds 'player.swf' to _public/_ and creates a new folder called _audio_ for storing all of your audio files.
+
+Make sure all your audio files are stored in _public/audio_ or change the *AUDIO_PATH* constant in lib/mp3_player.rb
+
+
+h1. Example Usage
+
+To play an mp3 file called *mysong* _(public/audio/mysong.mp3)_ simply add <%= mp3_player("mysong") %> to your view.
+
+You might find it easier to manage your files if you name them after the id of your model record.
+
+Below is a list of the extra options you can specify:
+(All colors should be expressed as hexadecimal values minus the '#'. eg. :bg => "99FFFF")
+
+[:width] width of the player when open in pixels, defaults to 290
+[:id] id of the div wrapping the player, defaults to "#{track_name}_player"
+[:class] class of the div wrapping the player, defaults to "mp3_player"
+[:bg] background colour, defaults to "BBBBBB"
+[:left_bg] background colour of the left tab, defaults to "AAAAAA"
+[:right_bg] background colour of the right tab, defaults to "AAAAAA"
+[:right_bg_hover] colour of the right background as the cursor hovers over, defaults to "EEEEEE"
+[:left_icon] the colour of the speaker icon on the left, defaults to "222222"
+[:right_icon] colour of the play/pause icon on the right, defaults to "222222"
+[:right_icon_hover] colour of the play/pause icon as the cursor hovers over, defaults to "222222"
+[:text] colour of the text, defaults to "222222"
+[:slider] colour of the slider bar, defaults to "333333"
+[:loader] colour of the loaded data so far, defaults to "DDDFFF"
+[:track] colour of the track on the slider, defaults to "888888"
+[:border] colour of the buffer border, defaults to "333333"
+
+
+*READ the RDocs for more info:* _vendor/plugins/mp3_player/doc/index.html_
+
+
+This plugin is based on the "Audio Player Worpress Plugin by Martin Laine":http://www.1pixelout.net/code/audio-player-wordpress-plugin/
+
+
+Please send any feedback to dr_gavin at hotmail dot com
+
+Copyright © 2009 http://gavinmorrice.com, released under the MIT license
