@@ -1,4 +1,7 @@
-h1. Mp3Player
+=Mp3Player
+
+Here's an mp3_player plugin for Rails.
+Check out http://handyrailstips.com/tips/7-playing-mp3-s-on-your-rails-site-with-mp3_player for more info
 
 To install:
 	script/plugin install git://github.com/GavinM/mp3_player.git
@@ -12,7 +15,7 @@ This adds 'player.swf' to _public/_ and creates a new folder called _audio_ for 
 Make sure all your audio files are stored in _public/audio_ or change the *AUDIO_PATH* constant in lib/mp3_player.rb
 
 
-h1. Example Usage
+==Example Usage
 
 To play an mp3 file called *mysong* _(public/audio/mysong.mp3)_ simply add <%= mp3_player("mysong") %> to your view.
 
@@ -44,6 +47,6 @@ Below is a list of the extra options you can specify:
 This plugin is based on the "Audio Player Worpress Plugin by Martin Laine":http://www.1pixelout.net/code/audio-player-wordpress-plugin/
 
 
-Please send any feedback to dr_gavin at hotmail dot com
+Please send any feedback to dr_gavin@hotmail.com
 
-Copyright © 2009 http://gavinmorrice.com, released under the MIT license
+Copyright © 2009 Gavin Morrice, released under the MIT license
