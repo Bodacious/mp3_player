@@ -10,16 +10,16 @@ To setup:
 	rake mp3_player
 
 
-This adds 'player.swf' to _public/_ and creates a new folder called _audio_ for storing all of your audio files.
+This adds 'player.swf' to <em>public/</em> and creates a new folder called _audio_ for storing all of your audio files.
 
-Make sure all your audio files are stored in _public/audio_ or change the *AUDIO_PATH* constant in lib/mp3_player.rb
+Make sure all your audio files are stored in <em>public/audio</em> or change the *AUDIO_PATH* constant in lib/mp3_player.rb
 
 
 ==Example Usage
 
-To play an mp3 file called *mysong* _(public/audio/mysong.mp3)_ simply add <%= mp3_player("mysong") %> to your view.
+To play an mp3 file called *mysong* <em>(public/audio/mysong.mp3)</em> simply add <%= mp3_player("mysong") %> to your view.
 
-You might find it easier to manage your files if you name them after the id of your model record.
+You might find it easier to manage your files if you name them after the <b>id</b> of your model record.
 
 Below is a list of the extra options you can specify:
 (All colors should be expressed as hexadecimal values minus the '#'. eg. :bg => "99FFFF")
@@ -41,10 +41,10 @@ Below is a list of the extra options you can specify:
 [:border] colour of the buffer border, defaults to "333333"
 
 
-*READ the RDocs for more info:* _vendor/plugins/mp3_player/doc/index.html_
+<b>READ the RDocs for more info:</b> <em>vendor/plugins/mp3_player/doc/index.html</em>
 
 
-This plugin is based on the "Audio Player Worpress Plugin by Martin Laine":http://www.1pixelout.net/code/audio-player-wordpress-plugin/
+This plugin is based on the Audio Player Worpress Plugin by Martin Laine:http://www.1pixelout.net/code/audio-player-wordpress-plugin/
 
 
 Please send any feedback to dr_gavin@hotmail.com
