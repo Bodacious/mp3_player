@@ -7,22 +7,19 @@ To install:
 	script/plugin install git://github.com/GavinM/mp3_player.git
 
 To setup:
-	rake mp3_player
+	script/generate mp3_player [name of your mp3 directory]
 
-
-This adds 'player.swf' to <em>public/</em> and creates a new folder called _audio_ for storing all of your audio files.
-
-Make sure all your audio files are stored in <em>public/audio</em> or change the *AUDIO_PATH* constant in lib/mp3_player.rb
-
+This adds 'player.swf' to <em>public/</em> and creates a new folder for storing all of your audio files.
 
 ==Example Usage
 
-To play an mp3 file called *mysong* <em>(public/audio/mysong.mp3)</em> simply add <%= mp3_player("mysong") %> to your view.
+To play an mp3 file found in _public/mp3s/mysong.mp3_ simply add <%= mp3_player("mp3s/mysong.mp3") %> to your view.
 
-You might find it easier to manage your files if you name them after the <b>id</b> of your model record.
+If you're using paperclip: <%= mp3_player @my_model.mp3.url %>.
 
 Below is a list of the extra options you can specify:
-(All colors should be expressed as hexadecimal values minus the '#'. eg. :bg => "99FFFF")
+(All colors should be expressed as hexadecimal values minus the '#'. 
+eg. <%= mp3_player @my_model.mp3.url, :bg => "99FFFF") %>
 
 [:width] width of the player when open in pixels, defaults to 290
 [:id] id of the div wrapping the player, defaults to "#{track_name}_player"
@@ -40,13 +37,8 @@ Below is a list of the extra options you can specify:
 [:track] colour of the track on the slider, defaults to "888888"
 [:border] colour of the buffer border, defaults to "333333"
 
-
-<b>READ the RDocs for more info:</b> <em>vendor/plugins/mp3_player/doc/index.html</em>
-
-
 This plugin is based on the Audio Player Worpress Plugin by Martin Laine http://www.1pixelout.net/code/audio-player-wordpress-plugin
 
+Thanks to Matt Ittigson (http://github.com/mattenat) for inspiring changes to help support paperclip.
 
-Please send any feedback to dr_gavin@hotmail.com
-
-Copyright © 2009 Gavin Morrice, released under the MIT license
+Copyright © 2009 Gavin Morrice (http://handyrailstips.com), released under the MIT license
