@@ -56,7 +56,7 @@ module Mp3Player
     # See the options above for more info on customising the player to match your site
     def mp3_player(path_to_file, options = {})
       # convert booleans to 'yes'/'no'
-      BOOLEAN_OPTIONS.each {|key, value| options[key] == true ? options[key] = "yes" : options[key] = "no"}
+      BOOLEAN_OPTIONS.each {|key, value| options[value] == true ? options[key] = "yes" : options[key] = "no"}
 
       # set defaults
       default_options = COLOR_OPTIONS.merge(BOOLEAN_OPTIONS.merge(OTHER_OPTIONS))
