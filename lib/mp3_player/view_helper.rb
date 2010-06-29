@@ -1,4 +1,4 @@
-require "URI"
+require "uri"
 module Mp3Player
   
   # This module contains the view helper <tt>mp3_player</tt>
@@ -85,18 +85,20 @@ module Mp3Player
 
       # turn the whole thing into a meaty string
       output = <<-HTML
-<div class=\"#{options[:class]}\"#{ " id=\"#{options[:id]}\"" if options[:id]}>
-  <object type="application/x-shockwave-flash" data="/player.swf" height="24" width=\"#{options[:width]}\">
-    <param name="movie" value="/player.swf" />
-    <param name="FlashVars" value="#{URI.escape flash_vars}" />
-    <param name="quality" value="high" />
-    <param name="menu" value="true" />
-    <param name="wmode" value="transparent" />
-  </object>
-</div>
-HTML
+        <div class=\"#{options[:class]}\"#{ " id=\"#{options[:id]}\"" if options[:id]}>
+          <object type="application/x-shockwave-flash" data="/player.swf" height="24" width=\"#{options[:width]}\">
+            <param name="movie" value="/player.swf" />
+            <param name="FlashVars" value="#{URI.escape flash_vars}" />
+            <param name="quality" value="high" />
+            <param name="menu" value="true" />
+            <param name="wmode" value="transparent" />
+          </object>
+        </div>
+      HTML
       output # => your awesome mp3_player
     end
+  
+    module_function :mp3_player
     
   end
 
