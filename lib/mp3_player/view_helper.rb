@@ -98,6 +98,7 @@ module Mp3Player
   
     module_function :mp3_player
 
+
     def increment_player_count
       @player_count ||= 0
       @player_count += 1
