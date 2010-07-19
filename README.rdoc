@@ -22,10 +22,6 @@ Below is a list of the extra options you can specify:
 eg. <%= mp3_player @my_model.mp3.url, :bg => "99FFFF") %>
 
 [:width] width of the player when open in pixels, defaults to 290
-<<<<<<< HEAD
-=======
-[:id] id of the div wrapping the player, defaults to "#{track_name}_player"
->>>>>>> e45c1104cfe1f9ca52d08e11fcc811d17c184371
 [:class] class of the div wrapping the player, defaults to "mp3_player"
 [:bg] background colour, defaults to "BBBBBB"
 [:left_bg] background colour of the left tab, defaults to "AAAAAA"
