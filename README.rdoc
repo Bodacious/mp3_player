@@ -1,0 +1,43 @@
+=Mp3Player
+
+Here's an mp3_player plugin for Rails.
+Check out http://handyrailstips.com/tips/7-playing-mp3-s-on-your-rails-site-with-mp3_player for more info
+
+To install:
+	script/plugin install git://github.com/GavinM/mp3_player.git
+
+To setup:
+	script/generate mp3_player [name of your mp3 directory]
+
+This adds 'player.swf' to <em>public/</em> and creates a new folder for storing all of your audio files.
+
+==Example Usage
+
+To play an mp3 file found in _public/mp3s/mysong.mp3_ simply add <%= mp3_player("mp3s/mysong.mp3") %> to your view.
+
+If you're using paperclip: <%= mp3_player @my_model.mp3.url %>.
+
+Below is a list of the extra options you can specify:
+(All colors should be expressed as hexadecimal values minus the '#'. 
+eg. <%= mp3_player @my_model.mp3.url, :bg => "99FFFF") %>
+
+[:width] width of the player when open in pixels, defaults to 290
+[:class] class of the div wrapping the player, defaults to "mp3_player"
+[:bg] background colour, defaults to "BBBBBB"
+[:left_bg] background colour of the left tab, defaults to "AAAAAA"
+[:right_bg] background colour of the right tab, defaults to "AAAAAA"
+[:right_bg_hover] colour of the right background as the cursor hovers over, defaults to "EEEEEE"
+[:left_icon] the colour of the speaker icon on the left, defaults to "222222"
+[:right_icon] colour of the play/pause icon on the right, defaults to "222222"
+[:right_icon_hover] colour of the play/pause icon as the cursor hovers over, defaults to "222222"
+[:text] colour of the text, defaults to "222222"
+[:slider] colour of the slider bar, defaults to "333333"
+[:loader] colour of the loaded data so far, defaults to "DDDFFF"
+[:track] colour of the track on the slider, defaults to "888888"
+[:border] colour of the buffer border, defaults to "333333"
+
+This plugin is based on the Audio Player Worpress Plugin by Martin Laine http://www.1pixelout.net/code/audio-player-wordpress-plugin
+
+Thanks to Matt Ittigson (http://github.com/mattenat) for inspiring changes to help support paperclip.
+
+Copyright © 2009 Gavin Morrice (http://handyrailstips.com), released under the MIT license
