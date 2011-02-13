@@ -92,7 +92,11 @@ module Mp3Player
           </object>
         </div>
       HTML
-      output.try(:html_safe) # => your awesome mp3_player
+      if output.respond_to?(:html_safe)
+        output.html_safe # => your awesome mp3_player
+      else
+        output # => your awesome mp3_player
+      end
     end
   
     module_function :mp3_player
